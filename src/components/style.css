@@ -40,3 +40,54 @@
 .input_submit:active{
     transform: scale(0.8);
 }
+
+.todos{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+.todoCard{
+    display: flex;
+    width:29.5%;
+    border-radius: 5px;
+    padding:20px;
+    margin-top: 15px;
+    background-color:yellowgreen;
+}
+
+.todo_text{
+    flex: 1;
+    padding: 5px;
+    font-size: 20px;
+}
+.todo_text:focus{
+    outline: none;
+}
+
+.icon{
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .todos {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .input {
+      width: 95%;
+    }
+    .container {
+      width: 95%;
+      flex-direction: column;
+    }
+    .todos {
+      width: 95%;
+      margin-bottom: 10px;
+    }
+  }

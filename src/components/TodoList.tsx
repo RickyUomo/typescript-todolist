@@ -1,7 +1,22 @@
+import './style.css';
+import { Todo } from '../model';
+import TodoCard from './TodoCard';
+interface Props {
+    todos: Todo[];
+    setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
+}
 
-const TodoList = () => {
+const TodoList: React.FC<Props> = ({ todos, setTodos }) => {
     return (
-        <div>TodoList</div>
+        <div className='todos'>
+            {todos && todos.map(todo =>
+                <TodoCard
+                    key={todo.id}
+                    todo={todo}
+                    todos={todos}
+                    setTodos={setTodos}
+                />)}
+        </div>
     )
 }
 
